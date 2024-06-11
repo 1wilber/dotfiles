@@ -1,0 +1,3 @@
+#!/bin/bash
+
+feh --bg-fill "$HOME/.config/bspwm/wallpapers/forest.jpg"

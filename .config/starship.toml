@@ -1,0 +1,16 @@
+[ruby]
+symbol = ' '
+format = '[$symbol($version)]($style) '
+[nodejs]
+format = '[ $version](bold green) '
+[daml]
+format = 'via [D $version](bold bright-green) '
+[package]
+format = '[ $version](208 bold) '
+[dart]
+format = '[ $version](bold blue) '
+[directory]
+truncation_length = 2
+[lua]
+format = 'via [ $version](bold blue) '
+
