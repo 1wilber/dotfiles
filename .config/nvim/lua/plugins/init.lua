@@ -2,58 +2,23 @@ return {
   "mg979/vim-visual-multi",
   -- startuptime
   "dstein64/vim-startuptime",
+
+  -- surround
   "tpope/vim-surround",
 
-  -- schema store
+  -- colorscheme
+  {
+    "folke/tokyonight.nvim",
+    lazy = true,
+    opts = { style = "night" },
+  },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "tokyonight",
     },
   },
-  {
-    "catppuccin/nvim",
-    lazy = true,
-    name = "catppuccin",
-    opts = {
-      transparent_background = true,
-      integrations = {
-        aerial = true,
-        alpha = true,
-        cmp = true,
-        dashboard = true,
-        flash = true,
-        gitsigns = true,
-        headlines = true,
-        illuminate = true,
-        indent_blankline = { enabled = true },
-        leap = true,
-        lsp_trouble = true,
-        mason = true,
-        markdown = true,
-        mini = true,
-        native_lsp = {
-          enabled = true,
-          underlines = {
-            errors = { "undercurl" },
-            hints = { "undercurl" },
-            warnings = { "undercurl" },
-            information = { "undercurl" },
-          },
-        },
-        navic = { enabled = true, custom_bg = "lualine" },
-        neotest = true,
-        neotree = true,
-        noice = true,
-        notify = true,
-        semantic_tokens = true,
-        telescope = true,
-        treesitter = true,
-        treesitter_context = true,
-        which_key = true,
-      },
-    },
-  },
+
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
@@ -74,12 +39,14 @@ return {
       },
     },
   },
+
   {
     "max397574/better-escape.nvim",
     config = function()
       require("better_escape").setup()
     end,
   },
+
   {
     "pmizio/typescript-tools.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
@@ -95,6 +62,7 @@ return {
       },
     },
   },
+
   {
     "williamboman/mason.nvim",
     opts = {
