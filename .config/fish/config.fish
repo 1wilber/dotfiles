@@ -35,4 +35,5 @@ set fish_pager_color_prefix 7dcfff
 set fish_pager_color_completion c0caf5
 set fish_pager_color_description 565f89
 set fish_pager_color_selected_background --background=283457
+
 rvm default

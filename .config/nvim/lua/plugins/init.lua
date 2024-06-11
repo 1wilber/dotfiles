@@ -6,12 +6,17 @@ return {
   -- surround
   "tpope/vim-surround",
 
-  -- colorscheme
   {
     "folke/tokyonight.nvim",
     lazy = true,
     opts = { style = "night" },
   },
+  {
+    "nvim-lualine/lualine.nvim",
+    event = "VeryLazy",
+    opts = { options = { theme = "tokyonight" } },
+  },
+  -- colorscheme
   {
     "LazyVim/LazyVim",
     opts = {
