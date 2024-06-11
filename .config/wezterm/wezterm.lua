@@ -4,6 +4,7 @@ local colors = require("lua/rose-pine").colors()
 return {
 	hyperlink_rules = wezterm.default_hyperlink_rules(),
 	colors = colors,
+	enable_wayland = false,
 	automatically_reload_config = true,
 	font = wezterm.font_with_fallback({
 		{
