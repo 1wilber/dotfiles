@@ -1,5 +1,14 @@
 return {
   "mg979/vim-visual-multi",
+  {
+    "supermaven-inc/supermaven-nvim",
+    config = true,
+    opts = {
+      keymaps = {
+        accept_suggestion = "<M-l>",
+      },
+    },
+  },
   -- startuptime
   "dstein64/vim-startuptime",
 

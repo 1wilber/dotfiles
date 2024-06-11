@@ -44,3 +44,5 @@ SETUVAR fish_pager_color_description:565f89
 SETUVAR fish_pager_color_prefix:7dcfff
 SETUVAR fish_pager_color_progress:565f89
 SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3d283457
+SETUVAR fish_user_paths:/home/wilber/\x2ervm/bin
+SETUVAR nvm_default_version:v22\x2e2\x2e0
