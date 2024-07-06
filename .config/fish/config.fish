@@ -12,7 +12,7 @@ set -g FZF_DEFAULT_OPTS "--height 40% \
 --color=info:#7aa2f7,prompt:#7dcfff,pointer:#7dcfff \
 --color=marker:#9ece6a,spinner:#9ece6a,header:#9ece6a"
 
-alias ls='exa -a --color=always --group-directories-first'
+alias ls='exa --color=always --group-directories-first'
 set -g FZF_DEFAULT_COMMAND 'fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
 starship init fish | source
 
