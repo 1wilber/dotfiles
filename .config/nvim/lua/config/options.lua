@@ -13,7 +13,7 @@ vim.opt.signcolumn = "yes"
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
-vim.keymap.set({'n', 'v'}, '<leader>bd', "<cmd>bd<cr>", { buffer = true })
-vim.keymap.set({'n'}, '<leader>qq', "<cmd>:q<cr>", { buffer = true })
+vim.keymap.set({'n', 'v'}, '<leader>bd', "<cmd>bd<cr>")
+vim.keymap.set({'n'}, '<leader>qq', "<cmd>:q<cr>")
 vim.keymap.set({'n'}, '[b', "<cmd>bprev<cr>")
 vim.keymap.set({'n'}, ']b', "<cmd>bnext<cr>")

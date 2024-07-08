@@ -63,7 +63,7 @@ return {
     dependencies = {"hrsh7th/cmp-nvim-lsp"},
     config = function()
       require('mason-lspconfig').setup {
-	ensure_installed = { "jsonls", "yamlls"  },
+	ensure_installed = { "jsonls", "yamlls", "ruby_lsp"  },
       }
       require("mason-lspconfig").setup_handlers{
 	function (server_name)
@@ -84,7 +84,9 @@ return {
     "williamboman/mason.nvim",
     config = true
   },
-  "neovim/nvim-lspconfig",
+  {
+    "neovim/nvim-lspconfig",
+  },
   {
     'akinsho/bufferline.nvim',
     version = "*",
