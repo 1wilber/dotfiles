@@ -1,7 +1,7 @@
 local lsp_utils = require("config.utils.lsp")
 return {
   "williamboman/mason-lspconfig.nvim",
-  dependencies = { "hrsh7th/cmp-nvim-lsp" },
+  dependencies = { "hrsh7th/cmp-nvim-lsp", "b0o/schemastore.nvim" },
   config = function()
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
     require("mason-lspconfig").setup({
@@ -18,6 +18,17 @@ return {
       ["tsserver"] = function()
         require("typescript-tools").setup({
           on_attach = lsp_utils.on_attach,
+        })
+      end,
+
+      ["jsonls"] = function()
+        require("lspconfig").jsonls.setup({
+          settings = {
+            json = {
+              schemas = require("schemastore").json.schemas(),
+              validate = { enable = true },
+            },
+          },
         })
       end,
       ["solargraph"] = function()

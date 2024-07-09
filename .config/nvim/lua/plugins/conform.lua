@@ -5,6 +5,7 @@ return {
       lua = { "stylua" },
       javascript = { { "prettierd", "prettier" } },
       ruby = { "solargraph" },
+      json = { "prettierd" },
     },
     format_on_save = {
       timeout_ms = 500,

@@ -35,4 +35,11 @@ return {
     "j-hui/fidget.nvim",
     opts = {},
   },
+  {
+    "andweeb/presence.nvim",
+    opts = {
+      buttons = false,
+      workspace_text = "Working on <unknow>",
+    },
+  },
 }
