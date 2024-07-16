@@ -4,7 +4,7 @@ return {
     formatters_by_ft = {
       lua = { "stylua" },
       javascript = { { "prettierd", "prettier" } },
-      ruby = { "solargraph" },
+      -- ruby = { "solargraph" },
       json = { "prettierd" },
     },
     format_on_save = {
