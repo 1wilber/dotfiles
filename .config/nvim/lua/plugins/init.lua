@@ -5,6 +5,24 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = true,
   },
+
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    opts = {
+      indent = {
+        char = "│",
+        tab_char = "│",
+      },
+      scope = { show_start = false, show_end = false },
+      exclude = {
+        filetypes = {
+          "neo-tree",
+          "mason",
+        },
+      },
+    },
+    main = "ibl",
+  },
   {
     "echasnovski/mini.pairs",
     version = "*",
