@@ -18,3 +18,4 @@ vim.keymap.set({ "n" }, "<leader>qq", "<cmd>:q<cr>")
 
 vim.keymap.set({"n"}, "<leader>sr", "<CMD>set nonumber relativenumber<CR>")
 vim.keymap.set({"n"}, "<leader>snr", "<CMD>set number norelativenumber<CR>")
+

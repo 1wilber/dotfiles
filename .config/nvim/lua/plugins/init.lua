@@ -1,5 +1,8 @@
 return {
   "honza/vim-snippets",
+  "tpope/vim-surround",
+  "nvim-lua/plenary.nvim",
+  "MunifTanjim/nui.nvim",
   {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -7,30 +10,11 @@ return {
   },
 
   {
-    "lukas-reineke/indent-blankline.nvim",
-    opts = {
-      indent = {
-        char = "│",
-        tab_char = "│",
-      },
-      scope = { show_start = false, show_end = false },
-      exclude = {
-        filetypes = {
-          "neo-tree",
-          "mason",
-        },
-      },
-    },
-    main = "ibl",
-  },
-  {
     "echasnovski/mini.pairs",
     version = "*",
     config = true,
   },
-  "tpope/vim-surround",
-  "nvim-lua/plenary.nvim",
-  "MunifTanjim/nui.nvim",
+
   {
     "max397574/better-escape.nvim",
     config = true,
@@ -55,6 +39,7 @@ return {
   },
   {
     "andweeb/presence.nvim",
+    config = true,
     opts = {
       buttons = false,
       workspace_text = "Working on <unknow>",

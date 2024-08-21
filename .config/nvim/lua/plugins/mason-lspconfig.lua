@@ -14,6 +14,7 @@ return {
         "tsserver",
         "tailwindcss",
         "cssls",
+        "lua_ls",
       },
     })
     require("mason-lspconfig").setup_handlers({
