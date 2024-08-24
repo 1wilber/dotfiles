@@ -1,5 +1,6 @@
 return {
   "honza/vim-snippets",
+  "williamboman/mason.nvim",
   "tpope/vim-surround",
   "nvim-lua/plenary.nvim",
   "MunifTanjim/nui.nvim",

@@ -16,6 +16,15 @@ vim.g.maplocalleader = "\\"
 vim.keymap.set({ "n", "v" }, "<leader>bd", "<cmd>bd<cr>")
 vim.keymap.set({ "n" }, "<leader>qq", "<cmd>:q<cr>")
 
-vim.keymap.set({"n"}, "<leader>sr", "<CMD>set nonumber relativenumber<CR>")
-vim.keymap.set({"n"}, "<leader>snr", "<CMD>set number norelativenumber<CR>")
+vim.keymap.set({ "n" }, "<leader>sr", "<CMD>set nonumber relativenumber<CR>")
+vim.keymap.set({ "n" }, "<leader>snr", "<CMD>set number norelativenumber<CR>")
 
+vim.api.nvim_create_autocmd("VimEnter", {
+  group = vim.api.nvim_create_augroup("update_plugins", { clear = true }),
+  callback = function()
+    if require("lazy.status").has_updates() then
+      print("Updating plugins...")
+      require("lazy").update({ show = false })
+    end
+  end,
+})

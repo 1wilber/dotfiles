@@ -4,12 +4,13 @@ return {
     formatters_by_ft = {
       lua = { "stylua" },
       javascript = { { "prettierd", "prettier" } },
-      -- ruby = { "solargraph" },
+      ruby = { "ruby_ls" },
       json = { "prettierd" },
+      eruby = { "erb_format" },
       cpp = { "cpplint" },
     },
     format_on_save = {
-      timeout_ms = 500,
+      timeout_ms = 1500,
       lsp_format = "fallback",
     },
   },

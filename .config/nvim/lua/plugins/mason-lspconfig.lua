@@ -6,9 +6,11 @@ return {
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
     require("mason-lspconfig").setup({
       ensure_installed = {
+        "html",
+        "emmet_ls",
         "jsonls",
         "yamlls",
-	"ruby_lsp",
+        "ruby_lsp",
         "eslint",
         "clangd",
         "tsserver",
