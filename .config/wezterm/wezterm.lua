@@ -3,8 +3,7 @@ local colors = require("lua/rose-pine").colors()
 
 return {
 	hyperlink_rules = wezterm.default_hyperlink_rules(),
-	-- colors = colors,
-	color_scheme = "tokyonight",
+	colors = colors,
 	enable_wayland = false,
 	automatically_reload_config = true,
 	font = wezterm.font_with_fallback({
@@ -26,6 +25,6 @@ return {
 	}),
 	font_size = 13.0,
 	hide_tab_bar_if_only_one_tab = true,
-	window_background_opacity = 1,
+	window_background_opacity = 0.8,
 	window_padding = { left = 0, right = 0, top = 0, bottom = 0 },
 }
