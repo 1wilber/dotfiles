@@ -7,10 +7,11 @@ return {
     require("mason-lspconfig").setup({
       ensure_installed = {
         "html",
+        "bashls",
         "emmet_ls",
         "jsonls",
         "yamlls",
-        "ruby_lsp",
+        "standardrb",
         "eslint",
         "clangd",
         "tsserver",

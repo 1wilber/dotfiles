@@ -4,7 +4,6 @@ return {
     formatters_by_ft = {
       lua = { "stylua" },
       javascript = { { "prettierd", "prettier" } },
-      ruby = { "ruby_ls" },
       json = { "prettierd" },
       eruby = { "erb_format" },
       cpp = { "cpplint" },

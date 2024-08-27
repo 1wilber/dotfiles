@@ -1,7 +1,7 @@
 return {
   "akinsho/bufferline.nvim",
   version = "*",
-  event = {"BufReadPre"},
+  event = { "ColorScheme" },
   dependencies = "nvim-tree/nvim-web-devicons",
   keys = {
     { "<leader>bo", "<Cmd>BufferLineCloseOthers<CR>", desc = "Delete Other Buffers" },
@@ -12,16 +12,22 @@ return {
     { "[B", "<cmd>BufferLineMovePrev<cr>", desc = "Move buffer prev" },
     { "]B", "<cmd>BufferLineMoveNext<cr>", desc = "Move buffer next" },
   },
-  opts = {
-    options = {
-      offsets = {
-        {
-          filetype = "neo-tree",
-          text = "File Explorer",
-          text_align = "center",
-          separator = true,
+  config = function()
+    local highlights = require("rose-pine.plugins.bufferline")
+    local options = {
+      highlights = highlights,
+      options = {
+        offsets = {
+          {
+            filetype = "neo-tree",
+            text = "File Explorer",
+            text_align = "center",
+            separator = true,
+          },
         },
       },
-    },
-  },
+    }
+
+    require("bufferline").setup(options)
+  end,
 }
