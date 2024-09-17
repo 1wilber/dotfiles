@@ -1,5 +1,3 @@
-rxfetch
-
 if [ ! -d "$HOME/.zplug" ]; then
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 fi
@@ -15,9 +13,8 @@ if [ ! -d "$HOME/.rvm" ]; then
 fi
 
 source $HOME/.zplug/init.zsh
-source $HOME/.fzf/shell/completion.zsh
-source $HOME/.fzf/shell/key-bindings.zsh
-export EDITOR=$(which nvim)
+# source $HOME/.fzf/shell/completion.zsh
+# source $HOME/.fzf/shell/key-bindings.zsh
 
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border --preview-window=right:60% --preview "bat --color=always --style=header,grid --line-range :500 {}"'
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
@@ -42,7 +39,7 @@ zplug load
 
 alias fix='git diff --name-only | uniq | xargs nvim -p'
 alias n='nvim'
-alias ls='lsd'
+alias ls='exa --group-directories-first'
 alias cat='bat'
 alias gla='git log --pretty=format:"%C(auto,yellow)%h %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(7,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D" --date=relative' # git branch list
 
@@ -50,10 +47,8 @@ function reload() {
   source ~/.zshrc
 }
 
-eval "$(starship init zsh)"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+source <(fzf --zsh)
+eval "$(starship init zsh)"

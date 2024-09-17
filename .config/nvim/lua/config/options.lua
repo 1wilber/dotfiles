@@ -14,6 +14,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 vim.keymap.set({ "n", "v" }, "<leader>bd", "<cmd>bd<cr>")
+vim.keymap.set({ "n", "i", "v" }, "<C-s>", "<cmd>w<cr><esc>")
 vim.keymap.set({ "n" }, "<leader>qq", "<cmd>:q<cr>")
 
 vim.keymap.set({ "n" }, "<leader>sr", "<CMD>set nonumber relativenumber<CR>")

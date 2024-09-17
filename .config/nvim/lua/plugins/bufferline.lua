@@ -1,7 +1,7 @@
 return {
   "akinsho/bufferline.nvim",
   version = "*",
-  event = { "ColorScheme" },
+  after = "catppuccin",
   dependencies = "nvim-tree/nvim-web-devicons",
   keys = {
     { "<leader>bo", "<Cmd>BufferLineCloseOthers<CR>", desc = "Delete Other Buffers" },
@@ -13,9 +13,8 @@ return {
     { "]B", "<cmd>BufferLineMoveNext<cr>", desc = "Move buffer next" },
   },
   config = function()
-    local highlights = require("rose-pine.plugins.bufferline")
     local options = {
-      highlights = highlights,
+      highlights = require("catppuccin.groups.integrations.bufferline").get(),
       options = {
         offsets = {
           {

@@ -22,7 +22,7 @@ require("lazy").setup({
     -- import your plugins
     { import = "plugins" },
   },
-  install = { colorscheme = { "rose-pine", "habamax" } },
+  install = { colorscheme = { "catppuccin", "habamax" } },
   -- automatically check for plugin updates
   checker = { enabled = true },
 })

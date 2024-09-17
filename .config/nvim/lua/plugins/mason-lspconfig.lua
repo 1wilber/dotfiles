@@ -14,7 +14,7 @@ return {
         "standardrb",
         "eslint",
         "clangd",
-        "tsserver",
+        "ts_ls",
         "tailwindcss",
         "cssls",
         "lua_ls",
@@ -28,7 +28,7 @@ return {
         })
       end,
 
-      ["tsserver"] = function()
+      ["ts_ls"] = function()
         require("typescript-tools").setup({})
       end,
 
