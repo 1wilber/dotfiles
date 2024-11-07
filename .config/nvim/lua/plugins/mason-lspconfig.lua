@@ -6,23 +6,33 @@ return {
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
     require("mason-lspconfig").setup({
       ensure_installed = {
-        "html",
         "bashls",
+        "ruby_lsp",
         "emmet_ls",
         "jsonls",
         "yamlls",
-        "standardrb",
         "eslint",
         "clangd",
         "ts_ls",
         "tailwindcss",
-        "cssls",
         "lua_ls",
+        "somesass_ls",
       },
     })
     require("mason-lspconfig").setup_handlers({
       function(server_name)
         require("lspconfig")[server_name].setup({
+          capabilities = capabilities,
+          on_attach = lsp_utils.on_attach,
+        })
+      end,
+
+      ["ruby_lsp"] = function()
+        require("lspconfig").ruby_lsp.setup({
+          init_options = {
+            formatter = "standard",
+            linters = { "standard" },
+          },
           capabilities = capabilities,
           on_attach = lsp_utils.on_attach,
         })

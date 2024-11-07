@@ -1,7 +1,8 @@
 return {
   "akinsho/bufferline.nvim",
   version = "*",
-  after = "catppuccin",
+  -- after = "catppuccin",
+  event = { "BufRead" },
   dependencies = "nvim-tree/nvim-web-devicons",
   keys = {
     { "<leader>bo", "<Cmd>BufferLineCloseOthers<CR>", desc = "Delete Other Buffers" },
@@ -14,7 +15,7 @@ return {
   },
   config = function()
     local options = {
-      highlights = require("catppuccin.groups.integrations.bufferline").get(),
+      -- highlights = require("catppuccin.groups.integrations.bufferline").get(),
       options = {
         offsets = {
           {

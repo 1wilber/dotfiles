@@ -7,6 +7,8 @@ return {
       json = { "prettierd" },
       eruby = { "erb_format" },
       cpp = { "cpplint" },
+      html = { "htmlbeautifier" },
+      css = { "prettierd", "prettier" },
     },
     format_on_save = {
       timeout_ms = 1500,

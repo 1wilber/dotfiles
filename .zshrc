@@ -52,3 +52,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 source <(fzf --zsh)
 eval "$(starship init zsh)"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
