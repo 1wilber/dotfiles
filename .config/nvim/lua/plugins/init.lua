@@ -1,4 +1,7 @@
 return {
+  {
+    "tpope/vim-rails",
+  },
   "honza/vim-snippets",
   "williamboman/mason.nvim",
   "tpope/vim-surround",
