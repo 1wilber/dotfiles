@@ -13,8 +13,6 @@ if [ ! -d "$HOME/.rvm" ]; then
 fi
 
 source $HOME/.zplug/init.zsh
-# source $HOME/.fzf/shell/completion.zsh
-# source $HOME/.fzf/shell/key-bindings.zsh
 
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border --preview-window=right:60% --preview "bat --color=always --style=header,grid --line-range :500 {}"'
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
@@ -53,6 +51,4 @@ export PATH="$PATH:$HOME/.rvm/bin"
 source <(fzf --zsh)
 eval "$(starship init zsh)"
 
-
-# Load Angular CLI autocompletion.
-source <(ng completion script)
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

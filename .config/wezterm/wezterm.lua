@@ -27,25 +27,6 @@ return {
 	}),
 	font_size = 13.0,
 	hide_tab_bar_if_only_one_tab = true,
-	window_background_opacity = 1,
+	window_background_opacity = 0.9,
 	window_padding = { left = 0, right = 0, top = 0, bottom = 0 },
-	-- leader = { key = "b", mods = "CTRL", timeout_milliseconds = 1000 },
-	-- keys = {
-	-- 	-- splitting
-	-- 	{
-	-- 		mods = "LEADER",
-	-- 		key = ".",
-	-- 		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
-	-- 	},
-	-- 	{
-	-- 		mods = "LEADER",
-	-- 		key = "/",
-	-- 		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
-	-- 	},
-	-- 	{
-	-- 		mods = "LEADER",
-	-- 		key = "Space",
-	-- 		action = wezterm.action.RotatePanes("Clockwise"),
-	-- 	},
-	-- },
 }

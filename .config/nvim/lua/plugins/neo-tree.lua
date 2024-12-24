@@ -4,11 +4,6 @@ return {
   keys = {
     { "<leader>e", "<cmd>Neotree toggle reveal=true<cr>", desc = "Explorer NeoTree" },
   },
-  requires = {
-    "nvim-lua/plenary.nvim",
-    "nvim-tree/nvim-web-devicons",
-    "MunifTanjim/nui.nvim"
-  },
   opts = {
     default_component_configs = {
       indent = {

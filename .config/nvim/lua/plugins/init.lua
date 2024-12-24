@@ -1,11 +1,12 @@
 return {
-  "tpope/vim-rails",
-  "honza/vim-snippets",
-  "williamboman/mason.nvim",
-  "tpope/vim-surround",
-  "nvim-lua/plenary.nvim",
-  "MunifTanjim/nui.nvim",
-  "mg979/vim-visual-multi",
+  { "tpope/vim-rails", lazy = true, ft = "ruby" },
+  { "honza/vim-snippets" },
+  { "tpope/vim-surround" },
+  { "nvim-tree/nvim-web-devicons", lazy = true },
+  { "williamboman/mason.nvim" },
+  { "nvim-lua/plenary.nvim", lazy = true },
+  { "MunifTanjim/nui.nvim", lazy = true },
+  { "mg979/vim-visual-multi" },
   {
     "folke/persistence.nvim",
     event = "BufReadPre",
@@ -13,8 +14,7 @@ return {
   },
   {
     "nvim-lualine/lualine.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    event = "ColorScheme",
+    event = "BufReadPre",
     opts = {
       options = {
         theme = "auto",
@@ -27,37 +27,26 @@ return {
   {
     "echasnovski/mini.pairs",
     version = "*",
-    config = true,
+    opts = {},
+    lazy = true,
+    event = "InsertEnter",
   },
 
   {
     "max397574/better-escape.nvim",
-    config = true,
-  },
-
-  {
-    "pmizio/typescript-tools.nvim",
-    config = false,
-    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     opts = {},
   },
   {
-    "williamboman/mason.nvim",
-    config = true,
-  },
-  {
-    "neovim/nvim-lspconfig",
-  },
-  {
     "j-hui/fidget.nvim",
+    lazy = true,
     opts = {},
   },
   {
     "andweeb/presence.nvim",
-    config = true,
     opts = {
       buttons = false,
       workspace_text = "Working on <unknow>",
     },
+    event = "BufWritePost",
   },
 }
