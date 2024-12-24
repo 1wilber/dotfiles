@@ -7,7 +7,7 @@ return {
       json = { "prettierd" },
       eruby = { "erb_format" },
       cpp = { "cpplint" },
-      html = { "htmlbeautifier" },
+      html = { "erb_format" },
       css = { "prettierd", "prettier" },
     },
     format_on_save = {

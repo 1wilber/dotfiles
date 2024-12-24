@@ -19,9 +19,9 @@ vim.keymap.set({ "n" }, "<leader>qq", "<cmd>:q<cr>")
 
 vim.keymap.set({ "n" }, "<leader>sr", "<CMD>set nonumber relativenumber<CR>")
 vim.keymap.set({ "n" }, "<leader>snr", "<CMD>set number norelativenumber<CR>")
-vim.keymap.set({ "n" }, "<leader>ec", "<cmd>Econtroller<cr>")
-vim.keymap.set({ "n" }, "<leader>ev", "<cmd>Eview<cr>")
-vim.keymap.set({ "n" }, "<leader>em", "<cmd>Emodel<cr>")
+vim.keymap.set({ "n" }, "<leader>rc", "<cmd>Econtroller<cr>")
+vim.keymap.set({ "n" }, "<leader>rv", "<cmd>Eview<cr>")
+vim.keymap.set({ "n" }, "<leader>rm", "<cmd>Emodel<cr>")
 
 vim.api.nvim_create_autocmd("VimEnter", {
   group = vim.api.nvim_create_augroup("update_plugins", { clear = true }),

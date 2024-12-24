@@ -1,17 +1,27 @@
 return {
-  {
-    "tpope/vim-rails",
-  },
+  "tpope/vim-rails",
   "honza/vim-snippets",
   "williamboman/mason.nvim",
   "tpope/vim-surround",
   "nvim-lua/plenary.nvim",
   "MunifTanjim/nui.nvim",
+  "mg979/vim-visual-multi",
+  {
+    "folke/persistence.nvim",
+    event = "BufReadPre",
+    opts = {},
+  },
   {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     event = "ColorScheme",
-    opts = {},
+    opts = {
+      options = {
+        theme = "auto",
+        section_separators = "",
+        component_separators = "",
+      },
+    },
   },
 
   {

@@ -1,8 +1,7 @@
 return {
   "akinsho/bufferline.nvim",
   version = "*",
-  -- after = "catppuccin",
-  event = { "BufRead" },
+  event = { "ColorScheme" },
   dependencies = "nvim-tree/nvim-web-devicons",
   keys = {
     { "<leader>bo", "<Cmd>BufferLineCloseOthers<CR>", desc = "Delete Other Buffers" },

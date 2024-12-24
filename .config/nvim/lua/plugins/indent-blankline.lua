@@ -10,6 +10,7 @@ return {
       filetypes = {
         "neo-tree",
         "mason",
+        "dashboard",
       },
     },
   },
