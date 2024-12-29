@@ -24,6 +24,10 @@ return {
 
       cmp.setup({
         sources = {
+          {
+            name = "lazydev",
+            group_index = 0, -- set group index to 0 to skip loading LuaLS completions
+          },
           { name = "nvim_lsp" },
           { name = "luasnip" },
         },
@@ -99,7 +103,6 @@ return {
           "eslint",
           "ts_ls",
           "tailwindcss",
-          "lua_ls",
           "somesass_ls",
         },
         handlers = {

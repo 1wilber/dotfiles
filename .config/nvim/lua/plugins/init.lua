@@ -1,5 +1,6 @@
 return {
   { "tpope/vim-rails", lazy = true, ft = "ruby" },
+  { "j-hui/fidget.nvim", opts = {} },
   { "honza/vim-snippets" },
   { "tpope/vim-surround" },
   { "nvim-tree/nvim-web-devicons", lazy = true },
@@ -34,11 +35,6 @@ return {
 
   {
     "max397574/better-escape.nvim",
-    opts = {},
-  },
-  {
-    "j-hui/fidget.nvim",
-    lazy = true,
     opts = {},
   },
   {
