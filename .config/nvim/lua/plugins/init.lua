@@ -1,4 +1,5 @@
 return {
+  { "wakatime/vim-wakatime", lazy = false },
   { "tpope/vim-rails", lazy = true, ft = "ruby" },
   { "j-hui/fidget.nvim", opts = {} },
   { "honza/vim-snippets" },
