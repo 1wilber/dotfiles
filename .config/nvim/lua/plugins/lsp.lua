@@ -11,6 +11,7 @@ return {
     event = "InsertEnter",
     dependencies = {
       "hrsh7th/cmp-buffer",
+      { "jsongerber/nvim-px-to-rem", opts = {} },
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-cmdline",
       { "L3MON4D3/LuaSnip", dependencies = { "rafamadriz/friendly-snippets" } },
@@ -21,16 +22,14 @@ return {
       local luasnip = require("luasnip")
       luasnip.filetype_extend("ruby", { "rails" })
       local cmp = require("cmp")
-
       cmp.setup({
-        sources = {
-          {
-            name = "lazydev",
-            group_index = 0, -- set group index to 0 to skip loading LuaLS completions
-          },
+        sources = cmp.config.sources({
           { name = "nvim_lsp" },
           { name = "luasnip" },
-        },
+          { name = "buffer" },
+          { name = "path" },
+        }),
+
         mapping = cmp.mapping.preset.insert({
           ["<C-b>"] = cmp.mapping.scroll_docs(-4),
           ["<C-f>"] = cmp.mapping.scroll_docs(4),

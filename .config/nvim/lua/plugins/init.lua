@@ -1,4 +1,16 @@
 return {
+
+  {
+    "supermaven-inc/supermaven-nvim",
+    opts = {
+
+      keymaps = {
+        accept_suggestion = "<M-j>",
+        clear_suggestion = "<C-]>",
+        accept_word = "<C-j>",
+      },
+    },
+  },
   { "wakatime/vim-wakatime", lazy = false },
   { "tpope/vim-rails", lazy = true, ft = "ruby" },
   { "j-hui/fidget.nvim", opts = {} },

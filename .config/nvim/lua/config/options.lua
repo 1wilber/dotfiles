@@ -1,6 +1,7 @@
 vim.opt.ignorecase = true
 vim.opt.relativenumber = true
 vim.opt.termguicolors = true
+
 vim.opt.cursorline = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.shiftwidth = 2
@@ -22,6 +23,8 @@ vim.keymap.set({ "n" }, "<leader>snr", "<CMD>set number norelativenumber<CR>")
 vim.keymap.set({ "n" }, "<leader>rc", "<cmd>Econtroller<cr>")
 vim.keymap.set({ "n" }, "<leader>rv", "<cmd>Eview<cr>")
 vim.keymap.set({ "n" }, "<leader>rm", "<cmd>Emodel<cr>")
+vim.keymap.set({ "n" }, "<leader>pxl", "<cmd>PxToRemLine<cr>")
+vim.keymap.set({ "n" }, "<leader>pxx", "<cmd>PxToRemCursor<cr>")
 
 vim.api.nvim_create_autocmd("VimEnter", {
   group = vim.api.nvim_create_augroup("update_plugins", { clear = true }),
@@ -31,4 +34,8 @@ vim.api.nvim_create_autocmd("VimEnter", {
       require("lazy").update({ show = false })
     end
   end,
+})
+vim.api.nvim_create_autocmd("Filetype", {
+  pattern = { "eruby-yaml" },
+  command = "set ft=yaml",
 })
