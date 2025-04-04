@@ -14,7 +14,6 @@ set -g FZF_DEFAULT_OPTS "--height 40% \
 
 alias ls='exa --color=always --group-directories-first'
 set -g FZF_DEFAULT_COMMAND 'fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
-starship init fish | source
 
 set fish_color_normal c0caf5
 set fish_color_command 7dcfff
@@ -38,3 +37,4 @@ set fish_pager_color_description 565f89
 set fish_pager_color_selected_background --background=283457
 
 rvm default
+starship init fish | source

@@ -1,41 +1,4 @@
-vim.opt.ignorecase = true
-vim.opt.relativenumber = true
-vim.opt.termguicolors = true
-
-vim.opt.cursorline = true
-vim.opt.clipboard = "unnamedplus"
-vim.opt.shiftwidth = 2
-vim.opt.mouse = ""
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undofile = true
-vim.opt.signcolumn = "yes"
-
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
-
-vim.keymap.set({ "n", "v" }, "<leader>bd", "<cmd>bd<cr>")
-vim.keymap.set({ "n", "i", "v" }, "<C-s>", "<cmd>w<cr><esc>")
-vim.keymap.set({ "n" }, "<leader>qq", "<cmd>:q<cr>")
-
-vim.keymap.set({ "n" }, "<leader>sr", "<CMD>set nonumber relativenumber<CR>")
-vim.keymap.set({ "n" }, "<leader>snr", "<CMD>set number norelativenumber<CR>")
-vim.keymap.set({ "n" }, "<leader>rc", "<cmd>Econtroller<cr>")
-vim.keymap.set({ "n" }, "<leader>rv", "<cmd>Eview<cr>")
-vim.keymap.set({ "n" }, "<leader>rm", "<cmd>Emodel<cr>")
-vim.keymap.set({ "n" }, "<leader>pxl", "<cmd>PxToRemLine<cr>")
-vim.keymap.set({ "n" }, "<leader>pxx", "<cmd>PxToRemCursor<cr>")
-
-vim.api.nvim_create_autocmd("VimEnter", {
-  group = vim.api.nvim_create_augroup("update_plugins", { clear = true }),
-  callback = function()
-    if require("lazy.status").has_updates() then
-      print("Updating plugins...")
-      require("lazy").update({ show = false })
-    end
-  end,
-})
-vim.api.nvim_create_autocmd("Filetype", {
-  pattern = { "eruby-yaml" },
-  command = "set ft=yaml",
-})
+-- Options are automatically loaded before lazy.nvim startup
+-- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
+-- Add any additional options here
+vim.opt.wrap = true
